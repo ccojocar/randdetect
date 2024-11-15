@@ -7,7 +7,7 @@ The implementation is based on ideas from [random-string-detector](https://githu
 # Usage
 
 ```
-go get -u github.com/ccojocar/randdetect@latest
+go get -u github.com/ccojocar/randdetect
 ```
 
 ```go
