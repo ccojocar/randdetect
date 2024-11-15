@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GO111MODULE: on
+    steps:
+      - name: Setup go
+        uses: actions/setup-go@v5
+      - name: Checkout Source
+        uses: actions/checkout@v4
+      - name: lint
+        uses: golangci/golangci-lint-action@v6
+      - name: Run Tests
+        run: go test -v .
